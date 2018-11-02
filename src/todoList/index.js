@@ -14,7 +14,7 @@ function getFilteredList(todos, filter){
 }
 
 const mapStateToProps = (state) => ({
-  todos: getFilteredList(state.todos, state.filter)
+  todos: getFilteredList(state.todoList.items, state.filter)
 });
 
 const mapDispatchToProps = (dispatch) => ({

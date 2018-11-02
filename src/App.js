@@ -9,7 +9,13 @@ import Filter from './filter';
 
 import './App.css';
 
-const store = createStore(rootReducer);
+const state = localStorage.getItem("todos") || "{}";
+const store = createStore(rootReducer, JSON.parse(state));
+
+store.subscribe(() => {
+  const state = store.getState();
+  localStorage.setItem("todos", JSON.stringify(state));
+})
 
 class App extends Component {
   render() {
