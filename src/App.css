@@ -30,3 +30,13 @@
     transform: rotate(360deg);
   }
 }
+
+ul.todo-list li {
+  width: 500px;
+  text-align: left;
+}
+
+.item-done {
+  color: #ccc;
+  text-decoration: line-through;
+}
